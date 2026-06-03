@@ -1,14 +1,14 @@
 package model;
 import model.MaterialBibliografia;
 
-public class Libri extends MaterialBibliografia{
+public class Libro extends MaterialBibliografia{
     private String autor;
     private String isbn;
     private String editorial;
     private int paginas;
 
 
-    public Libri(String codigo, String titulo, boolean disponible, boolean prestable, String autor, String isbn,
+    public Libro(String codigo, String titulo, boolean disponible, boolean prestable, String autor, String isbn,
         String editorial, int paginas) {
         super(codigo, titulo, disponible, prestable);
         this.autor = autor;

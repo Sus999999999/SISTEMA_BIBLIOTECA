@@ -29,7 +29,7 @@ public class Main {
             boolean disponible;
             boolean prestable;
 
-            
+            System.out.println("\nElija una Opcion");
             opcion = sc.nextInt();
             sc.nextLine();
 
@@ -68,7 +68,7 @@ public class Main {
                     int paginas = sc.nextInt();
 
 
-                    Libri li = new Libri(
+                    Libro li = new Libro(
                             codigo,
                             titulo,
                             disponible,
