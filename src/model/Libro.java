@@ -1,5 +1,4 @@
 package model;
-import model.MaterialBibliografia;
 
 public class Libro extends MaterialBibliografia{
     private String autor;
@@ -33,7 +32,7 @@ public class Libro extends MaterialBibliografia{
         }else{
             disponibilidad = "No";
         }
-        return "Codigo:" + codigo + "\ntitulo:" + titulo + "\nautor:" + autor + "\ndisponible:" + disponibilidad
+        return "Libro\nCodigo:" + codigo + "\ntitulo:" + titulo + "\nautor:" + autor + "\ndisponible:" + disponibilidad
                 + "\nisbn:" + isbn + "\nprestable:" + prestar + "\neditorial:" + editorial + "\npaginas:"
                  + paginas;
     }

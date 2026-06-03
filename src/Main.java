@@ -7,6 +7,7 @@ public class Main {
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
+        
 
         InventarioService inventario = new InventarioService();
 
@@ -85,6 +86,43 @@ public class Main {
 
                 case 2:
 
+                System.out.println("\n___ Agregacion de revista ___\n");
+
+                    System.out.println("Código:");
+                    codigo = sc.nextLine();
+
+                    System.out.println("Titulo:");
+                    titulo = sc.nextLine();
+
+                    System.out.println("Disponble:");
+                    disponible = sc.nextBoolean();
+                    sc.nextLine();
+
+                    System.out.println("Edicion:");
+                    String edicion = sc.nextLine();
+                    while (edicion == "") {
+                        edicion = sc.nextLine();
+                    }
+                    
+                    System.out.println("Mes de publicacion:");
+                    int mesPub = sc.nextInt();
+
+                    System.out.println("Categoria:");
+                    String categoria = sc.nextLine();
+
+
+                    Revista rev = new Revista(
+                            codigo,
+                            titulo,
+                            disponible,
+                            true,
+                            edicion,
+                            mesPub,
+                            categoria
+                    );
+
+                    inventario.agregarProducto(rev);
+
                     break;
 
                 case 3:
@@ -98,6 +136,8 @@ public class Main {
                     break;
                 case 6:
                     inventario.mostrarInventario();
+                    System.out.println("Preciona Enter para volver");
+                    sc.nextLine();
                     break;
                 case 7:
                     break;
